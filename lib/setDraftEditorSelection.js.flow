@@ -226,6 +226,8 @@ function addFocusToSelection(selection: Object, node: Node, offset: number, sele
         selectionState: JSON.stringify(selectionState.toJS(), null, 2)
       }); // allow the error to be thrown -
       // better than continuing in a broken state
+
+      throw e;
     }
   } else {
     // IE doesn't support extend. This will mean no backward selection.
